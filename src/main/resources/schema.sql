@@ -1,0 +1,16 @@
+CREATE TABLE available_slots
+(
+    id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+    start_time  DATETIME NOT NULL,
+    end_time    DATETIME NOT NULL,
+    is_reserved BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE users
+(
+    id         BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username   VARCHAR(255) NOT NULL UNIQUE,
+    email      VARCHAR(255) NOT NULL UNIQUE,
+    password   VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
