@@ -12,7 +12,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ReservationOutputDto implements Serializable {
+public class UserResponseDto implements Serializable {
 
-    private
+    private String userName;
+    private String email;
 }
