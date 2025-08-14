@@ -16,12 +16,13 @@ public class reservationController {
 
 
     @PostMapping(value = "/booking")
-    public ResponseEntity<ReservationResponseDto> booking(@RequestHeader(value = "user_id") Long userId){
+    public ResponseEntity<ReservationResponseDto> booking(@RequestHeader(value = "userId") Long userId) {
         return ResponseEntity.ok(reservationService.bookingClosest(userId));
     }
 
     @DeleteMapping(value = "/{userName}/{reservationId}")
-    public ResponseEntity<String> cancelReservationById(@PathVariable String reservationId){
-
+    public ResponseEntity<String> cancelReservationById(@PathVariable String userName,
+                                                        @PathVariable Long reservationId) {
+        return ResponseEntity.ok(reservationService.cancelReservation(userName, reservationId));
     }
 }

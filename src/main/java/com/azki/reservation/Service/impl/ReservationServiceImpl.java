@@ -21,7 +21,7 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public String cancelReservation(Long userId, Long reservationId) {
+    public String cancelReservation(String userName, Long reservationId) {
         return null;
     }
 }
