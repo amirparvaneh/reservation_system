@@ -7,5 +7,9 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface AvailableSlotRepository extends JpaRepository<AvailableSlots,Long>, JpaSpecificationExecutor<AvailableSlots> {
+public interface AvailableSlotRepository extends JpaRepository<AvailableSlots,Long>,
+        JpaSpecificationExecutor<AvailableSlots> {
+
+    AvailableSlots findAvailableSlotsByIsReservedFalseOrderByStartTimeDesc();
+
 }

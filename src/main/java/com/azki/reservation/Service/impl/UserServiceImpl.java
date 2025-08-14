@@ -25,4 +25,9 @@ public class UserServiceImpl implements UserService {
         List<User> allUser = userRepository.findAll();
         return userMapper.userListToResponseDtoList(allUser);
     }
+
+    @Override
+    public User findUserById(Long userId) {
+        return null;
+    }
 }

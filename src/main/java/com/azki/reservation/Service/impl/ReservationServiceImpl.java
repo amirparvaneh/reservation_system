@@ -1,6 +1,8 @@
 package com.azki.reservation.Service.impl;
 
+import com.azki.reservation.Service.AvailableSlotService;
 import com.azki.reservation.Service.ReservationService;
+import com.azki.reservation.Service.UserService;
 import com.azki.reservation.dto.response.ReservationResponseDto;
 import com.azki.reservation.repository.ReservationRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,10 +16,14 @@ import org.springframework.stereotype.Service;
 public class ReservationServiceImpl implements ReservationService {
 
     private final ReservationRepository repository;
+    private final UserService userService;
+    private final AvailableSlotService availableSlotService;
 
     @Override
     public ReservationResponseDto bookingClosest(Long userId) {
-        return null;
+        userService.findUserById(userId);
+        availableSlotService.findFirstSlotToBooking();
+
     }
 
     @Override
