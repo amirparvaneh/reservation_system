@@ -10,6 +10,7 @@ import com.azki.reservation.model.Reservations;
 import com.azki.reservation.model.User;
 import com.azki.reservation.model.enums.ReservationStatus;
 import com.azki.reservation.repository.ReservationRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -26,11 +27,13 @@ public class ReservationServiceImpl implements ReservationService {
     private final ReservationMapper reservationMapper;
 
     @Override
+    @Transactional
     public ReservationResponseDto bookingClosest(Long userId) {
         User applicants = userService.findUserById(userId);
         AvailableSlots firstSlotToBooking = availableSlotService.findFirstSlotToBooking();
         Reservations reservedTime = Reservations.builder()
                 .reservationTime(firstSlotToBooking.getStartTime())
+                .slot(firstSlotToBooking)
                 .user(applicants)
                 .status(ReservationStatus.CONFIRMED)
                 .build();
