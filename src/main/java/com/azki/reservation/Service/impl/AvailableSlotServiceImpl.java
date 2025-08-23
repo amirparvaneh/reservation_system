@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 @Slf4j
@@ -18,5 +20,16 @@ public class AvailableSlotServiceImpl implements AvailableSlotService {
     @Override
     public AvailableSlots findFirstSlotToBooking() {
         return repository.findAvailableSlotsByIsReservedFalseOrderByStartTimeDesc();
+    }
+
+    @Override
+    public List<AvailableSlots> findAllAvailableSlot() {
+        return repository.findAllByIsReservedFalse();
+    }
+
+    @Override
+    public void changeToReserved(AvailableSlots availableSlots) {
+        availableSlots.setIsReserved(Boolean.TRUE);
+        repository.save(availableSlots);
     }
 }

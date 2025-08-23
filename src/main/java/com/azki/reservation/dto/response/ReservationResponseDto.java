@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -15,6 +16,8 @@ import java.io.Serializable;
 @Builder
 public class ReservationResponseDto implements Serializable {
 
+    private LocalDateTime reservationTime;
     private ReservationStatus reservationStatus;
+    private String email;
 
 }
