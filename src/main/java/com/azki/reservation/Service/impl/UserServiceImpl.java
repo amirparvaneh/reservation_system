@@ -9,6 +9,9 @@ import com.azki.reservation.model.User;
 import com.azki.reservation.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +19,7 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService , UserDetailsService {
 
     private final UserRepository userRepository;
     private final UserMapper userMapper;
@@ -31,5 +34,14 @@ public class UserServiceImpl implements UserService {
     public User findUserById(Long userId) {
         return userRepository.findById(userId).orElseThrow(() ->
                 new ResourceNotFoundException("not founded user"));
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String email)
+            throws UsernameNotFoundException {
+
+        return userRepository.findByEmail(email)
+                .orElseThrow(() ->
+                        new UsernameNotFoundException("User not found"));
     }
 }
