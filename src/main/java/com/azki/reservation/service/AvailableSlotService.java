@@ -1,4 +1,4 @@
-package com.azki.reservation.Service;
+package com.azki.reservation.service;
 
 import com.azki.reservation.model.AvailableSlots;
 

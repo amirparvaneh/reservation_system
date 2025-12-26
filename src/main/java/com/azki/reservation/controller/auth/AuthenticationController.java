@@ -1,7 +1,7 @@
 package com.azki.reservation.controller.auth;
 
 
-import com.azki.reservation.Service.AuthenticationService;
+import com.azki.reservation.service.AuthenticationService;
 import com.azki.reservation.dto.request.LoginRequest;
 import com.azki.reservation.dto.request.RegisterRequest;
 import com.azki.reservation.dto.response.AuthResponse;

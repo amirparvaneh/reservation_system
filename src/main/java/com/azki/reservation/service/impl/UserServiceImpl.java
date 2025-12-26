@@ -1,7 +1,7 @@
-package com.azki.reservation.Service.impl;
+package com.azki.reservation.service.impl;
 
 
-import com.azki.reservation.Service.UserService;
+import com.azki.reservation.service.UserService;
 import com.azki.reservation.dto.UserResponseDto;
 import com.azki.reservation.exceptions.ResourceNotFoundException;
 import com.azki.reservation.mapper.UserMapper;

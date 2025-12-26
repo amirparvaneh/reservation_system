@@ -1,7 +1,7 @@
 package com.azki.reservation.controller;
 
 
-import com.azki.reservation.Service.ReservationService;
+import com.azki.reservation.service.ReservationService;
 import com.azki.reservation.dto.response.ReservationResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

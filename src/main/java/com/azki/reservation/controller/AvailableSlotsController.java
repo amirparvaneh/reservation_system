@@ -1,7 +1,7 @@
 package com.azki.reservation.controller;
 
 
-import com.azki.reservation.Service.AvailableSlotService;
+import com.azki.reservation.service.AvailableSlotService;
 import com.azki.reservation.model.AvailableSlots;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

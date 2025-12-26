@@ -1,4 +1,4 @@
-package com.azki.reservation.Service;
+package com.azki.reservation.service;
 
 import com.azki.reservation.dto.request.LoginRequest;
 import com.azki.reservation.dto.request.RegisterRequest;

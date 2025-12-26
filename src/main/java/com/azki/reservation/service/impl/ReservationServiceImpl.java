@@ -1,8 +1,8 @@
-package com.azki.reservation.Service.impl;
+package com.azki.reservation.service.impl;
 
-import com.azki.reservation.Service.AvailableSlotService;
-import com.azki.reservation.Service.ReservationService;
-import com.azki.reservation.Service.UserService;
+import com.azki.reservation.service.AvailableSlotService;
+import com.azki.reservation.service.ReservationService;
+import com.azki.reservation.service.UserService;
 import com.azki.reservation.dto.response.ReservationResponseDto;
 import com.azki.reservation.mapper.ReservationMapper;
 import com.azki.reservation.model.AvailableSlots;

@@ -1,6 +1,6 @@
-package com.azki.reservation.Service.impl;
+package com.azki.reservation.service.impl;
 
-import com.azki.reservation.Service.AuthenticationService;
+import com.azki.reservation.service.AuthenticationService;
 import com.azki.reservation.config.JwtService;
 import com.azki.reservation.dto.request.LoginRequest;
 import com.azki.reservation.dto.request.RegisterRequest;

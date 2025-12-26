@@ -1,6 +1,6 @@
-package com.azki.reservation.Service.impl;
+package com.azki.reservation.service.impl;
 
-import com.azki.reservation.Service.AvailableSlotService;
+import com.azki.reservation.service.AvailableSlotService;
 import com.azki.reservation.model.AvailableSlots;
 import com.azki.reservation.repository.AvailableSlotRepository;
 import jakarta.persistence.LockModeType;
