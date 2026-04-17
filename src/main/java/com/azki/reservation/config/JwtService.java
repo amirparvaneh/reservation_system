@@ -18,7 +18,7 @@ import java.util.Date;
 public class JwtService {
 
     private static final String SECRET_KEY =
-            "232424234234234sfdsdfsf";
+            "123456789abcdefj";
 
     private static final long EXPIRATION_MS = 1000 * 60 * 60 ; // 1 hour
 

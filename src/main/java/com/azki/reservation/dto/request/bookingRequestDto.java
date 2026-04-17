@@ -13,4 +13,5 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 public class bookingRequestDto implements Serializable {
+    private String s;
 }
